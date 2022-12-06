@@ -24,6 +24,7 @@ class CountryController extends Controller
 
     public function store(StoreCountryRequest $request)
     {
+        echo $request;
         Countries::create($request->validated());
         return response()->json('Countries Created');
     }
