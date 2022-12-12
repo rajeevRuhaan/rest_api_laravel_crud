@@ -25,7 +25,7 @@ Route::apiResource('country', CountryController::class);
 
 Route::apiResource('/products', ProductController::class);
 
-Route::group(['prefix'=> 'products'], function ()
+Route::group(['prefix'=> '/products'], function ()
 {
     Route::apiResource('/{product}/reviews', ReviewController::class);
 }
